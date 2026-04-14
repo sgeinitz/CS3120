@@ -1,74 +1,71 @@
-# CS3120: Machine Learning - Lab Notebooks
+# CS3120: Machine Learning Lab Notebooks
 
-Welcome to the repository for **CS3120: Machine Learning**. This repository serves as a central hub for the Jupyter Notebooks and datasets used throughout the semester.
+This repository contains the Jupyter notebooks, datasets, and images used in **CS3120: Introductory Machine Learning**. The labs are designed to give students hands-on practice with core machine learning ideas, from regression and model selection to neural networks and transfer learning.
 
-## Overview
+## Labs
 
-This collection is designed to provide hands-on experience with fundamental and advanced machine learning concepts. Each lab focuses on a specific topic, combining theoretical foundations with practical implementation using Python.
+| Lab | Topic | Summary | Notebook | Colab | Kaggle |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Linear Regression | Introduces linear regression, least-squares fitting, manual training, and why linear models are often stable and interpretable baselines. | [lab01_linear_regression.ipynb](lab01_linear_regression.ipynb) | [Open](https://colab.research.google.com/github/sgeinitz/CS3120/blob/main/lab01_linear_regression.ipynb) | [Open](https://kaggle.com/kernels/welcome?src=https://github.com/sgeinitz/CS3120/blob/main/lab01_linear_regression.ipynb) |
+| 2 | Model Tuning and Selection | Covers performance metrics, underfitting vs. overfitting, the bias-variance tradeoff, and cross-validation with the Ames Housing dataset. | [lab02_model_tuning_and_selection.ipynb](lab02_model_tuning_and_selection.ipynb) | [Open](https://colab.research.google.com/github/sgeinitz/CS3120/blob/main/lab02_model_tuning_and_selection.ipynb) | [Open](https://kaggle.com/kernels/welcome?src=https://github.com/sgeinitz/CS3120/blob/main/lab02_model_tuning_and_selection.ipynb) |
+| 3 | Artificial Neural Network from Scratch | Builds a simple neural network from scratch, compares it to logistic regression, and then incrementally introduces PyTorch autograd, modules, and optimizers. | [lab03_ann_from_scratch.ipynb](lab03_ann_from_scratch.ipynb) | [Open](https://colab.research.google.com/github/sgeinitz/CS3120/blob/main/lab03_ann_from_scratch.ipynb) | [Open](https://kaggle.com/kernels/welcome?src=https://github.com/sgeinitz/CS3120/blob/main/lab03_ann_from_scratch.ipynb) |
+| 4 | Transfer Learning with a CNN | Uses a pre-trained convolutional neural network in PyTorch to apply transfer learning on an image classification task. | [lab04_transfer_learning.ipynb](lab04_transfer_learning.ipynb) | [Open](https://colab.research.google.com/github/sgeinitz/CS3120/blob/main/lab04_transfer_learning.ipynb) | [Open](https://kaggle.com/kernels/welcome?src=https://github.com/sgeinitz/CS3120/blob/main/lab04_transfer_learning.ipynb) |
 
-As the semester progresses, new notebooks and resources will be added here.
+## Getting Started
 
-## Current Labs
+### Online
+Each lab notebook can be opened directly in **Google Colab** or **Kaggle** using the links above. This is the quickest option if you do not want to configure a local Python environment.
 
-*   **Lab 1: Linear Regression** - An introduction to fitting models, manual training methods, and the stability of linear models.
-*   **Lab 2: Model Tuning and Selection** - An exploration of performance metrics, model underfitting/overfitting, the bias-variance tradeoff, and cross-validation using the Ames Housing dataset.
+### Local Environment
+If you prefer to run the notebooks locally, install Python 3 and the required libraries.
 
-## How to Use This Repository
-
-### 1. Online (Recommended)
-Each notebook includes badges to open the environment directly in **Google Colab** or **Kaggle**. This is the easiest way to get started without configuring a local environment.
-
-### 2. Local Environment
-If you prefer to work locally, ensure you have Python 3.x and the necessary libraries installed. 
-
-**Clone the repository:**
+**Clone the repository**
 ```bash
 git clone https://github.com/sgeinitz/CS3120.git
 cd CS3120
 ```
 
-**Install dependencies:**
+**Install dependencies**
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn scipy statsmodels ipywidgets jupyter
+pip install pandas numpy matplotlib seaborn scikit-learn scipy statsmodels ipywidgets jupyter torch torchvision
 ```
 
-**Launch Jupyter:**
+**Launch Jupyter**
 ```bash
 jupyter notebook
 ```
 
 ## Repository Structure
 
-*   `/data`: Datasets required for the labs (CSV files, etc.).
-*   `/images`: Visual aids, diagrams, and illustrations used within the notebooks.
-*   `*.ipynb`: The lab notebooks themselves.
+- `lab01_linear_regression.ipynb` through `lab04_transfer_learning.ipynb`: The lab notebooks.
+- `data/`: Tabular datasets used in the earlier labs.
+- `images/`: Figures, illustrations, and image assets used in the notebooks, including the transfer learning image dataset.
 
 ## Saving and Submitting Your Work
 
-After completing a lab, you need to share your notebook. You can do this using either a GitHub Gist (quickest) or a dedicated GitHub Repository (best for portfolios).
+After completing a lab, share your finished notebook using either a GitHub Gist or a GitHub repository.
 
-### Option A: GitHub Gist (Quickest and Recommended)
-Gists are a simple way to share single files (like a notebook).
+### Option A: GitHub Gist
 
-1.  **Save your Notebook:** In Jupyter/Colab, ensure all cells are run and saved (`File > Save`). Download the `.ipynb` file to your computer.
-2.  Go to [gist.github.com](https://gist.github.com).
-3.  **Drag & Drop:** Drag your downloaded `.ipynb` file into the large text area.
-4.  **Create:** Click "Create secret gist" (or public, if you prefer).
-5.  **Share:** Copy the URL from your browser address bar to submit.
+1. **Save your notebook.** In Jupyter or Colab, run all cells and save the notebook (`File > Save`).
+2. Go to [gist.github.com](https://gist.github.com).
+3. Drag the downloaded `.ipynb` file into the editor.
+4. Click **Create secret gist** (or public gist, if you prefer).
+5. Copy the resulting URL and submit it.
 
 ### Option B: GitHub Repository
-Creating a repository allows you to keep all your coursework organized in one place.
 
-1.  **Create a Repo:** Go to [github.com/new](https://github.com/new) and name it something like `CS3120-Coursework`.
-2.  **Upload:**
-    *   *Via Browser:* Open your new repo, click **Add file > Upload files**, and drag your `.ipynb` file in. Commit the changes.
-    *   *Via Colab:* Go to `File > Save a copy in GitHub`, authorize GitHub if needed, and select your repository.
-3.  **Share:** Copy the link to the specific file in your repository to submit.
+1. Create a repository at [github.com/new](https://github.com/new), for example `CS3120-Coursework`.
+2. Upload your notebook:
+   - Via browser: open the repo, select **Add file > Upload files**, and upload the `.ipynb` file.
+   - Via Colab: use `File > Save a copy in GitHub`, authorize GitHub, and choose your repository.
+3. Copy the link to the notebook file and submit it.
 
 ## Submission Checklist
 
 Before submitting your link:
-1.  **Run All Cells:** Ensure every code cell has been executed and the output is visible.
-2.  **Answer Questions:** Check that all text/markdown questions are answered clearly.
-3.  **Verify Link:** Open your link in an incognito window to ensure it's accessible.
-4.  **Submit Link:** Submit the (GitHub/Gist) link to your completed notebook in Canvas. 
+
+1. **Run all cells** so outputs are visible.
+2. **Answer all questions** in markdown or code cells.
+3. **Verify the link** in an incognito or logged-out browser window.
+4. **Submit the link** to Canvas.
